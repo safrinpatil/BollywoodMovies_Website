@@ -58,7 +58,7 @@ function populateHomePage() {
 
     HomePageMovies.forEach(movie => {
          const movieCard = document.createElement('div');
-         const imageUrl = `images/${movie.image}`;
+         const imageUrl = `img/${movie.image}`;
 
         movieCard.classList.add('col-md-4', 'mb-4');
       
