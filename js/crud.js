@@ -1,4 +1,6 @@
-const previousMovies = [
+const localStorageKey = 'previousMovies';
+
+const defaultMovies = [
     { title: "Radhe: Your Most Wanted Bhai", director: "Prabhu Deva", year: 2021 },
     { title: "Sooryavanshi", director: "Rohit Shetty", year: 2021 },
     { title: "Laal Singh Chaddha", director: "Advait Chandan", year: 2022 },
@@ -10,7 +12,21 @@ const previousMovies = [
     { title: "Brahmastra", director: "Ayan Mukerji", year: 2024 }
 ];
 
+let previousMovies = loadMovies();
+
 let movieToDeleteIndex = null;
+
+function loadMovies() {
+    const moviesJSON = localStorage.getItem(localStorageKey);
+    if (moviesJSON) {
+        return JSON.parse(moviesJSON);
+    }
+    return defaultMovies;
+}
+
+function saveMovies() {
+    localStorage.setItem(localStorageKey, JSON.stringify(previousMovies));
+}
 
 function populatePreviousMovies() {
     const tableBody = document.getElementById('movieTableBody');
@@ -26,7 +42,7 @@ function populatePreviousMovies() {
         cellIndex.innerText = index + 1;
         cellTitle.innerText = movie.title;
         cellDirector.innerText = movie.director;
-        cellYear.innerText = movie.year;        
+        cellYear.innerText = movie.year;
         cellActions.innerHTML = `
             <button class="btn btn-info btn-sm" onclick="editMovie(${index})">Edit</button>
             <button class="btn btn-danger btn-sm" onclick="confirmDelete(${index})">Delete</button>
@@ -40,6 +56,7 @@ function handleFormSubmit(event) {
     const director = document.getElementById('director').value;
     const year = document.getElementById('year').value;
     previousMovies.push({ title, director, year });
+    saveMovies();
     populatePreviousMovies();
     document.getElementById('movieForm').reset();
 }
@@ -50,6 +67,7 @@ function handleUpdate() {
     const director = document.getElementById('director').value;
     const year = document.getElementById('year').value;
     previousMovies[index] = { title, director, year };
+    saveMovies();
     populatePreviousMovies();
     document.getElementById('movieForm').reset();
     document.getElementById('updateButton').style.display = 'none';
@@ -74,6 +92,7 @@ function confirmDelete(index) {
 function handleConfirmDelete() {
     if (movieToDeleteIndex !== null) {
         previousMovies.splice(movieToDeleteIndex, 1);
+        saveMovies();
         populatePreviousMovies();
         $('#deleteModal').modal('hide');
         movieToDeleteIndex = null;
