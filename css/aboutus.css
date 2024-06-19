@@ -1,0 +1,86 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+.about-container {
+    margin: 30px auto;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.about-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.about-header {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.about-section {
+    margin-bottom: 20px;
+}
+.list-group-item {
+    background-color: transparent;
+    border: none;
+    padding-left: 0;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 1rem;
+}
+.list-group-item::before {
+    content: "•";
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+.bold {
+    font-weight: bold;
+}
+.github-link {
+    margin-top: 20px;
+}
+.github-link a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+.github-link a:hover {
+    text-decoration: underline;
+}
+.footer {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+h1 {
+    color: #343a40; /* Dark gray heading color */
+    text-align: center;
+    margin-top: 50px;
+}
+
+.navbar {
+    background-color: #343a40 !important; /* Dark gray navbar background */
+}
+
+.navbar-brand {
+    color: #ffffff !important; /* White navbar brand text color */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important; /* White navbar link text color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa !important; /* Hover color for navbar links */
+}

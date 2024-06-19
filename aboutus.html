@@ -6,8 +6,8 @@
     <title>About Us</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+     <!-- Custom CSS -->
+     <link rel="stylesheet" href="css/aboutus.css">
 </head>
 <body>
     <header>
@@ -20,56 +20,62 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="aboutus.html">About Us</a>
-                    </li>
+                    </li>                    
                     <li class="nav-item">
                         <a class="nav-link" href="crud.html">Manage Movies</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="analytics.html">Data Analytics</a>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main class="container">
-        <h1>About Us</h1>
-        <img id="movieList" src="images/safrin.jpg" alt="Your Photo">
-        <!-- <p>My name is Safrin Patil, and I am the developer of this website. I have experience in HTML, CSS, and JavaScript. This website was created as part of an assignment to demonstrate my skills in web development. You can find the source code of this project on my <a href="https://github.com/your-github-username">GitHub</a>.</p> -->
-            <h2>Safrin Patil</h2>
-            <p>Hello! My name is Safrin Patil, and I am a MS-BAIS student at University of South Florida ,currently enrolled in ISM 6225 - Distributed Information Systems. I have a strong passion for web development and user interface design. This website is a part of my coursework, and it showcases my ability to create a data-driven, interactive web application using HTML, CSS, and JavaScript.</p>
+    <main class="container about-container text-center">
+        <h1 class="about-header">About Us</h1>
+        <img src="images/safrin.jpg" alt="Safrin Patil" class="about-photo img-fluid">
+        <h2 class="about-header">Safrin Patil</h2>
+        <div class="about-content text-left">
+            <p class="lead">Hello! My name is Safrin Patil, and I am an MS-BAIS student at the University of South Florida, currently enrolled in ISM 6225 - Distributed Information Systems. I have a strong passion for web development and user interface design. This website is a part of my coursework, and it showcases my ability to create a data-driven, interactive web application using HTML, CSS, and JavaScript.</p>
+            
+            <div class="about-section">
+                <h2 class="about-header">Experience Developing This Website</h2>
+                <p>Developing this website has been an enriching experience. It allowed me to apply my knowledge of web technologies and improve my skills in creating a user-friendly interface. The project involved several key steps, including:</p>
+                <ul class="list-group">
+                    <li class="list-group-item">Planning the website layout and structure based on the given assignment requirements.</li>
+                    <li class="list-group-item">Researching and gathering relevant data to populate the website content.</li>
+                    <li class="list-group-item">Designing and implementing the HTML and CSS to create a visually appealing and responsive design.</li>
+                    <li class="list-group-item">Adding interactivity using JavaScript, including creating dummy CRUD operations and data visualizations.</li>
+                    <li class="list-group-item">Ensuring that the website is easy to navigate and use, with a consistent look and feel across all pages.</li>
+                </ul>
+            </div>
 
-            <h3>Experience Developing This Website</h3>
-            <p>Developing this website has been an enriching experience. It allowed me to apply my knowledge of web technologies and improve my skills in creating a user-friendly interface. The project involved several key steps, including:</p>
-            <ul>
-                <li>Planning the website layout and structure based on the given assignment requirements.</li>
-                <li>Researching and gathering relevant data to populate the website content.</li>
-                <li>Designing and implementing the HTML and CSS to create a visually appealing and responsive design.</li>
-                <li>Adding interactivity using JavaScript, including creating dummy CRUD operations and data visualizations.</li>
-                <li>Ensuring that the website is easy to navigate and use, with a consistent look and feel across all pages.</li>
-            </ul>
+            <div class="about-section">
+                <h2 class="about-header">Technologies Used</h2>
+                <ul class="list-group">
+                    <li class="list-group-item"><span class="bold">HTML5</span>: For structuring the content and layout of the website.</li>
+                    <li class="list-group-item"><span class="bold">CSS3</span>: For styling the website and ensuring it is visually appealing and responsive.</li>
+                    <li class="list-group-item"><span class="bold">JavaScript</span>: For adding interactivity and dynamic content, including dummy CRUD operations.</li>
+                    <li class="list-group-item"><span class="bold">Bootstrap</span>: For creating a responsive design and utilizing pre-built components.</li>
+                    <li class="list-group-item"><span class="bold">Chart.js</span>: For creating interactive data visualizations on the Data Analytics page.</li>
+                    <li class="list-group-item"><span class="bold">GitHub</span>: For version control and hosting the source code of the website.</li>
+                </ul>
+            </div>
 
-            <h3>Technologies Used</h3>
-            <p>The following technologies and frameworks were used to develop this website:</p>
-            <ul>
-                <li><strong>HTML5:</strong> For structuring the content and layout of the website.</li>
-                <li><strong>CSS3:</strong> For styling the website and ensuring it is visually appealing and responsive.</li>
-                <li><strong>JavaScript:</strong> For adding interactivity and dynamic content, including dummy CRUD operations.</li>
-                <li><strong>Bootstrap:</strong> For creating a responsive design and utilizing pre-built components.</li>
-                <li><strong>Chart.js:</strong> For creating interactive data visualizations on the Data Analytics page.</li>
-                <li><strong>GitHub:</strong> For version control and hosting the source code of the website.</li>
-            </ul>
-
-            <h3>GitHub Repository</h3>
-            <p>You can view the complete source code of this website on my GitHub account. Click the link below to access the repository:</p>
-            <p><a href="https://github.com/yourusername/your-repository" target="_blank">GitHub Repository</a></p>
-        </section>
+            <div class="about-section github-link text-left">
+                <h2 class="about-header">GitHub Repository</h2>
+                <p>You can view the complete source code of this website on my GitHub account. Click the link below to access the repository:</p>
+                <p><a href="https://github.com/safrinpatil/BollywoodMovies_Website" target="_blank">GitHub Repository</a></p>
+            </div>
+        </div>
     </main>
-    <footer>
+    <footer class="text-center py-3 footer">
         <p>&copy; 2024 Safrin Patil</p>
     </footer>
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
